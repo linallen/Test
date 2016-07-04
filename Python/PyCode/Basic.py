@@ -20,3 +20,6 @@ for i in range(1, 10):
         print(i, 'is smaller or equal then 5.\n'),
     else:
         print(i, 'is larger then 5.\n'), 
+
+import sys
+print(sys.version)
