@@ -1,4 +1,4 @@
-package pkgSpark
+package spark
 
 import org.apache.spark.SparkContext
 import org.apache.spark.SparkContext._
@@ -10,7 +10,7 @@ object WC {
     val conf = new SparkConf().setAppName("MySparkDriverApp").setMaster("spark://master:7077").set("spark.executor.memory", "2g")
     println(conf)
 
-    val workDir = "d:\\_Test\\"
+    val workDir = "c:\\_Test\\"
     val inputFileName = workDir + "input.txt"
     val inputFileName2 = workDir + "input2.txt"
     val sc = new SparkContext("local[4]", "Allen's Word Count", "/usr/local/spark", Nil, Map(), Map())
@@ -65,7 +65,7 @@ object WC {
     val total = lines2.reduce(_ + _)
     println(" total number of \'" + char + "\' = " + total)
     //    lines2.cache()
-    //    lines2.saveAsTextFile("d:\\_Test\\count_" + char)
+    //    lines2.saveAsTextFile("c:\\_Test\\count_" + char)
 
     ///////////////////////////////////
     val data = Array(1, 2, 3, 4, 5)

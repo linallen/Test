@@ -1,4 +1,4 @@
-package pkgSpark
+package spark
 
 object Test extends App {
   val wc = new WordCount()

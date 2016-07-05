@@ -1,4 +1,4 @@
-package pkgSpark
+package test.ok
 
 import org.apache.spark.SparkContext
 import org.apache.spark.SparkContext._
@@ -20,6 +20,7 @@ object App {
 
     println("orig count = " + colCount)
     println("sampled count = " + smpCount)
+    sc.stop()
   }
 
 }

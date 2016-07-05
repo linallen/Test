@@ -1,3 +1,4 @@
+package test.ok;
 import scala.math.random
 import org.apache.spark._
 

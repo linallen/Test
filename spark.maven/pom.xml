@@ -5,7 +5,7 @@
 	<artifactId>spark.maven</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>${project.artifactId}</name>
-	<description>My wonderfull scala app</description>
+	<description>My scala app</description>
 	<inceptionYear>2015</inceptionYear>
 	<licenses>
 		<license>

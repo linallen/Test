@@ -1,3 +1,4 @@
+package spark;
 import org.apache.spark.ml.classification.LogisticRegression
 import org.apache.spark.ml.param.ParamMap
 import org.apache.spark.mllib.linalg.{ Vector, Vectors }

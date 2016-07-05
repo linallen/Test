@@ -1,10 +1,7 @@
+package test.ok;
 import org.apache.spark.mllib.tree.DecisionTree
 import org.apache.spark.mllib.tree.model.DecisionTreeModel
 import org.apache.spark.mllib.util.MLUtils
-import org.apache.spark.ml.classification.LogisticRegression
-import org.apache.spark.ml.param.ParamMap
-import org.apache.spark.mllib.linalg.{ Vector, Vectors }
-import org.apache.spark.sql.Row
 import org.apache.spark._
 
 object Classification {
@@ -12,7 +9,7 @@ object Classification {
     val spark = new SparkContext("local[4]", "Classification", "/usr/local/spark", Nil, Map(), Map())
 
     // Load and parse the data file.
-    val data = MLUtils.loadLibSVMFile(spark, "D:/GoogleDrive/UTS/SourceCode/_MyTest/spark-master/data/mllib/sample_libsvm_data.txt")
+    val data = MLUtils.loadLibSVMFile(spark, "C:/Allen/1_Study/2016_04_13_Spark/Test/spark-master/data/mllib/sample_libsvm_data.txt")
     // Split the data into training and test sets (30% held out for testing)
     val splits = data.randomSplit(Array(0.7, 0.3))
     val (trainingData, testData) = (splits(0), splits(1))
@@ -38,7 +35,7 @@ object Classification {
     println("Learned classification tree model:\n" + model.toDebugString)
 
     // Save and load model
-    model.save(spark, "d:/_Test/myDecisionTreeClassificationModel")
-    val sameModel = DecisionTreeModel.load(spark, "d:/_Test/myDecisionTreeClassificationModel")
+    model.save(spark, "myDecisionTreeClassificationModel")
+    val sameModel = DecisionTreeModel.load(spark, "myDecisionTreeClassificationModel")
   }
 }

@@ -1,4 +1,4 @@
-package pkgSpark
+package spark
 
 object TestSpark {
   def main(args: Array[String]) {

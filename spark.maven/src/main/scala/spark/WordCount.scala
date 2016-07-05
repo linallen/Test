@@ -1,4 +1,4 @@
-package pkgSpark
+package spark
 
 import org.apache.spark.SparkContext
 import org.apache.spark.SparkContext._
@@ -10,7 +10,7 @@ class WordCount {
     val conf = new SparkConf().setAppName("MySparkDriverApp").setMaster("spark://master:7077").set("spark.executor.memory", "2g")
     println(conf)
 
-    val fileName = "d:\\_Test\\input.txt"
+    val fileName = "c:\\_Test\\input.txt"
     val sc = new SparkContext("local[4]", "Allen's Word Count", "/usr/local/spark", Nil, Map(), Map())
     val str = sc.toString()
     println(str)
@@ -34,7 +34,7 @@ class WordCount {
     for (i <- 1 to 100) {
       val counts = inputfile.flatMap(line => line.split(" ")).map(word => (word, 1)).reduceByKey(_ + _);
       counts.cache()
-      counts.saveAsTextFile("d:\\_Test\\output" + i)
+      counts.saveAsTextFile("c:\\_Test\\output" + i)
       println(i + "\n" + counts.toDebugString)
       Thread.sleep(1000)
     }
