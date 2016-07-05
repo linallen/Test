@@ -1,4 +1,4 @@
-package test
+package test.scala.maven
 
 import java.util.ArrayList;
 import allen.arff._;
